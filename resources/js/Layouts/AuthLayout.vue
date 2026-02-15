@@ -7,7 +7,7 @@ import { Link } from '@inertiajs/vue3';
         <div class="sm:mx-auto sm:w-full sm:max-w-md">
             <!-- Logo e título -->
             <div class="text-center">
-                <Link href="/public" class="inline-flex items-center space-x-2">
+                <Link href="/" class="inline-flex items-center space-x-2">
                     <span class="text-4xl">🪙</span>
                     <span class="font-bold text-3xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Moeda do Saber
