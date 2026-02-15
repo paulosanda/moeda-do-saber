@@ -142,7 +142,7 @@ Para popular o sistema com dados de teste:
 ```bash
 ./vendor/bin/sail artisan db:seed
 ```
-**Os seeders criara o primeiro usuário admin**
+**O seeder criara o primeiro usuário admin**
 ```aiignore
     'Test User',
     'email' => 'test@example.com',
