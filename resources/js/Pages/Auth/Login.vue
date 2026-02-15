@@ -97,16 +97,6 @@ const submit = () => {
                     Entrar
                 </button>
             </div>
-
-            <!-- Link para registro (extra) -->
-            <div class="text-center mt-4">
-                <p class="text-sm text-gray-600">
-                    Ainda não tem conta?
-                    <Link href="/register" class="font-medium text-blue-600 hover:text-blue-500">
-                        Cadastre sua escola
-                    </Link>
-                </p>
-            </div>
         </form>
     </AuthLayout>
 </template>
