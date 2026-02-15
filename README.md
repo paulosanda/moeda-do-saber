@@ -142,12 +142,14 @@ Para popular o sistema com dados de teste:
 ```bash
 ./vendor/bin/sail artisan db:seed
 ```
-**Os seeders criarão:**
-- Uma escola padrão
-- Usuários (admin, professores, alunos)
-- Turmas e disciplinas
-- Contas com saldos iniciais
-- Produtos na loja
+**Os seeders criara o primeiro usuário admin**
+```aiignore
+    'Test User',
+    'email' => 'test@example.com',
+    'password' => bcrypt('password'),
+    'admin' => true,
+```
+Use este usuário para acessar o painel administrativo e configurar a escola, professores, disciplinas e produtos da loja.
 
 ## Testes
 Execute os testes com PEST:
