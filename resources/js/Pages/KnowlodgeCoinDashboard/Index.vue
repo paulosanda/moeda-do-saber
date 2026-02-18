@@ -58,7 +58,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import KnowlodgeCoinDashboardLayout from '@/Layouts/KnowlodgeCoinDashboardLayout.vue';
 
 defineOptions({ layout: KnowlodgeCoinDashboardLayout });
