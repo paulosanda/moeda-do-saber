@@ -14,11 +14,8 @@ Route::get('/', [LandingPageController::class, 'index'])->name('landing');
  * @return void
  */
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware(['auth'])->get('/knowledge-dashboard', [KnowledgeCoinDashboardController::class, 'index'])->name('knowledge.dashboard');
+Route::middleware(['auth'])->get('/dashboard',
+    [KnowledgeCoinDashboardController::class, 'index'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

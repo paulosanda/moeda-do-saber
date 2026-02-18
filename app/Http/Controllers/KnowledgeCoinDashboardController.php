@@ -14,7 +14,6 @@ class KnowledgeCoinDashboardController extends Controller
      */
     public function index(): Response
     {
-        // Aqui você pode buscar dados do banco, calcular estatísticas, etc.
         $stats = [
             'cursos' => 5,          // Exemplo: número de cursos em andamento
             'conquistas' => 3,       // Exemplo: conquistas desbloqueadas
@@ -22,10 +21,9 @@ class KnowledgeCoinDashboardController extends Controller
             'nivel' => 4,
         ];
 
-        // Retorna uma resposta Inertia apontando para o componente Vue
-        // 'KnowlodgeCoinDashboard/Index' é o caminho relativo a resources/js/Pages
         return Inertia::render('KnowlodgeCoinDashboard/Index', [
-            'stats' => $stats,       // Os dados serão passados como props para o componente Vue
+            'stats' => $stats,
+            'title' => 'Visão Geral - Moeda do Saber',
         ]);
     }
 }
