@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KnowledgeCoinDashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +17,8 @@ Route::get('/', [LandingPageController::class, 'index'])->name('landing');
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware(['auth'])->get('/knowledge-dashboard', [KnowledgeCoinDashboardController::class, 'index'])->name('knowledge.dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
